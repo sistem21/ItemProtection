@@ -1,4 +1,4 @@
-package me.sistem21.IceFightPlayer;
+package me.sistem21.itemprotection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class IceFightPlayer extends JavaPlugin implements Listener {
+public class ItemProtection extends JavaPlugin implements Listener {
 
 	private List<Protection> protections = new ArrayList<>();
 
@@ -50,7 +50,7 @@ public class IceFightPlayer extends JavaPlugin implements Listener {
 					if (!prot.getOwner().equals(p.getUniqueId())) {
 						e.setCancelled(true);
 						p.setVelocity(p.getLocation().getDirection().multiply(-0.5));
-						p.sendMessage(getConfig().getString("pickup-not-allowed").replaceAll("&", "ง").replaceAll("%player", p.getName())
+						p.sendMessage(getConfig().getString("pickup-not-allowed").replaceAll("&", "ยง").replaceAll("%player", p.getName())
 								.replaceAll("%owner", prot.getPlayerOwner().getName()));
 					} else {
 						e.setCancelled(false);

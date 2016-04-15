@@ -1,4 +1,4 @@
-package me.sistem21.IceFightPlayer;
+package me.sistem21.itemprotection;
 
 import java.util.UUID;
 
